@@ -1,0 +1,10 @@
+func f(x:int)->int{
+    auto a:int,b:int;
+    a=x;
+    return a;
+}
+func main()->int{
+	auto a:int,b:int;
+	/*a=f(5);*/
+	return 9;
+}
