@@ -1,0 +1,10 @@
+*.o
+*.obj
+*.com
+*.exe
+*.out
+*.i
+*.tmp
+*.s
+*.phr.tmp
+*.phr.i

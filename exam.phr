@@ -1,0 +1,52 @@
+#include<stdbool.bh>
+import stdio as io;
+scope sort{
+    swap(arr,idx_a,idx_b)word arr,idx_a,idx_b;{
+        auto t:word;
+        t=#($arr)[idx_a];
+        #($arr)[idx_a]=@($arr)[idx_b];
+        #($arr)[idx_b]=t;
+        t=- 2;
+        t+=2;
+    }
+}
+
+word bubble_sort(buf, len)word buf,len;{
+    auto i:word=0;
+    auto word flag;
+outer:
+    flag=(bool)0.0;
+    until(i>=len=- 1){
+        auto piece slice_view=buf@0:len;
+        auto j:word=0;
+inner:
+        until(j>=len){
+            if(@($slice_view)[j]>@($slice_view)[j+1]){
+                sort::swap(buf,j,j=+ 1);
+                flag=1;
+            }
+            j=+ 1;
+            goto inner;
+        }
+        if(~flag){
+            return 0;
+        }
+        i=+ 1;
+        goto outer;
+    }
+    flag;
+}
+word test[8]={9,3,7,1,4,8,2,5};
+main(){
+    defer{
+        auto uuu:int=0;
+        auto fmt:word="%d ";
+        until(uuu>7){
+        	io::printf(fmt,$(test+uuu));
+        	++uuu;
+		}
+    }
+    word ret;
+    ret=bubble_sort($test,8);
+    0;
+}
